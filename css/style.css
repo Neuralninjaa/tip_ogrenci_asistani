@@ -68,17 +68,8 @@ header {
     position: relative;
 }
 
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+nav {
+    background-color: var(--header-bg);
 }
 
 nav ul {
@@ -86,6 +77,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    background-color: var(--header-bg);
 }
 
 nav a {
@@ -95,6 +87,7 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s;
+    display: block;
 }
 
 nav a:hover {

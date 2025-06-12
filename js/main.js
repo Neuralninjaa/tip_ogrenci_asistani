@@ -6,16 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeText = themeSwitch.querySelector('span');
     
     // Varsayılan olarak koyu tema
-    document.body.setAttribute('data-theme', 'dark');
-    themeIcon.className = 'fas fa-sun';
-    themeText.textContent = 'Açık Tema';
-    
-    // Kaydedilmiş temayı kontrol et
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.setAttribute('data-theme', 'light');
-        themeIcon.className = 'fas fa-moon';
-        themeText.textContent = 'Koyu Tema';
+    if (!localStorage.getItem('theme')) {
+        document.body.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-sun';
+        themeText.textContent = 'Açık Tema';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        const savedTheme = localStorage.getItem('theme');
+        document.body.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'light') {
+            themeIcon.className = 'fas fa-moon';
+            themeText.textContent = 'Koyu Tema';
+        } else {
+            themeIcon.className = 'fas fa-sun';
+            themeText.textContent = 'Açık Tema';
+        }
     }
 
     // Tema değiştirme butonu tıklama olayı
