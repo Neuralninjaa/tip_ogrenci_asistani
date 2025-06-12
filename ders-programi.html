@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tıp Öğrencisi Asistanı</title>
+    <title>Ders Programı - Tıp Öğrencisi Asistanı</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -29,31 +30,18 @@
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/kiu-tip-logo.png" alt="Kırıkkale Tıp Fakültesi Logosu" class="school-logo" />
-            <h1>Tıp Öğrencisi Asistanı</h1>
-            <p>Akademik hayatınızı kolaylaştıracak araçlar</p>
-        </section>
-
-        <section class="features">
-            <div class="feature-card">
-                <h2>Ders Programı</h2>
-                <a href="ders-programi.html" class="button">Görüntüle</a>
+        <section class="schedule-container">
+            <h1>Ders Programı</h1>
+            <div class="schedule-filters">
+                <button class="filter-btn active" data-day="all">Tümü</button>
+                <button class="filter-btn" data-day="monday">Pazartesi</button>
+                <button class="filter-btn" data-day="tuesday">Salı</button>
+                <button class="filter-btn" data-day="wednesday">Çarşamba</button>
+                <button class="filter-btn" data-day="thursday">Perşembe</button>
+                <button class="filter-btn" data-day="friday">Cuma</button>
             </div>
-
-            <div class="feature-card">
-                <h2>Akademik Takvim</h2>
-                <a href="akademik-takvim.html" class="button">Görüntüle</a>
-            </div>
-
-            <div class="feature-card">
-                <h2>Ortalama Hesaplama</h2>
-                <a href="ortalama-hesaplama.html" class="button">Hesapla</a>
-            </div>
-
-            <div class="feature-card">
-                <h2>Yemek Menüsü</h2>
-                <a href="yemek-menu.html" class="button">Menüyü Gör</a>
+            <div class="schedule-table">
+                <!-- Ders programı tablosu JavaScript ile doldurulacak -->
             </div>
         </section>
     </main>
@@ -63,5 +51,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/schedule.js"></script>
 </body>
 </html> 

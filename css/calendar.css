@@ -1,0 +1,124 @@
+.calendar-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.calendar-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.calendar-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.calendar-events {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 1rem;
+}
+
+.event-card {
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--nav-active);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateX(5px);
+}
+
+.event-card.exam {
+    border-left-color: #e74c3c;
+}
+
+.event-card.holiday {
+    border-left-color: #2ecc71;
+}
+
+.event-card.event {
+    border-left-color: #f1c40f;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.event-date {
+    color: var(--nav-active);
+    font-size: 0.9rem;
+}
+
+.event-description {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.event-type {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.event-type.exam {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.event-type.holiday {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+}
+
+.event-type.event {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #f1c40f;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .calendar-filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .event-card {
+        padding: 0.8rem;
+    }
+
+    .event-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .event-date {
+        font-size: 0.8rem;
+    }
+} 
