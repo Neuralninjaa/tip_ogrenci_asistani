@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        // Menü ikonunu değiştir
         const icon = navToggle.querySelector('i');
         if (navMenu.classList.contains('active')) {
             icon.className = 'fas fa-times';
@@ -55,12 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Aktif menü öğesini vurgula
-    const currentPage = window.location.pathname.split('/').pop();
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
-            link.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            link.classList.add('active');
         }
     });
 }); 
