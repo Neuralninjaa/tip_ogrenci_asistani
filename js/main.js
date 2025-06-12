@@ -5,27 +5,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeIcon = themeSwitch.querySelector('i');
     const themeText = themeSwitch.querySelector('span');
     
+    // Varsayılan olarak koyu tema
+    document.body.setAttribute('data-theme', 'dark');
+    themeIcon.className = 'fas fa-sun';
+    themeText.textContent = 'Açık Tema';
+    
     // Kaydedilmiş temayı kontrol et
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.setAttribute('data-theme', 'dark');
+    if (savedTheme === 'light') {
+        document.body.setAttribute('data-theme', 'light');
         themeIcon.className = 'fas fa-moon';
-        themeText.textContent = 'Açık Tema';
+        themeText.textContent = 'Koyu Tema';
     }
 
     // Tema değiştirme butonu tıklama olayı
     themeSwitch.addEventListener('click', () => {
         const currentTheme = document.body.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            document.body.removeAttribute('data-theme');
-            themeIcon.className = 'fas fa-sun';
-            themeText.textContent = 'Koyu Tema';
-            localStorage.setItem('theme', 'light');
-        } else {
+        if (currentTheme === 'light') {
             document.body.setAttribute('data-theme', 'dark');
-            themeIcon.className = 'fas fa-moon';
+            themeIcon.className = 'fas fa-sun';
             themeText.textContent = 'Açık Tema';
             localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            themeIcon.className = 'fas fa-moon';
+            themeText.textContent = 'Koyu Tema';
+            localStorage.setItem('theme', 'light');
         }
     });
 
