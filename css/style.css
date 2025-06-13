@@ -219,42 +219,66 @@ footer {
         display: block;
         position: absolute;
         right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 40px;
-        width: 40px;
+        top: 15px;
+        height: 30px;
+        width: 30px;
         padding: 0;
         margin: 0;
-        line-height: 40px;
+        line-height: 30px;
+        z-index: 1001;
     }
 
     header {
-        height: 60px;
-        min-height: 60px;
         position: relative;
+        /* Header'ın doğal yüksekliği olacak */
     }
+
     nav {
-        min-height: 60px;
         background-color: var(--header-bg);
         width: 100%;
+        min-height: 60px;
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
     }
 
     nav ul {
-        display: none;
+        /* Başlangıçta gizli */
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        padding: 1rem 0;
+        justify-content: center;
+        gap: 0.2rem;
+        padding: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        position: relative;
+        top: 0px; /* Menü butonunun altından başlasın */
     }
 
     nav ul.active {
-        display: flex;
+        max-height: 300px; /* Yeterli yükseklik */
+        padding: 1rem 0;  
+    }
+
+    nav li {
+        text-align: center;
     }
 
     nav a {
+        display: block;
         width: 100%;
         text-align: center;
-        padding: 0.8rem 1rem;
+        padding: 1rem;
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
     }
 
     .hero {
