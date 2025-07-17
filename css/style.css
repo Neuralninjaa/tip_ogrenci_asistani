@@ -140,9 +140,8 @@ nav a.active {
 
 /* Ana İçerik */
 main {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
     flex: 1 0 auto;
 }
 
@@ -311,6 +310,7 @@ footer {
 
 /* Responsive Tasarım */
 @media (max-width: 768px) {
+    
     .theme-switch {
         bottom: 20px;
         right: 20px;
