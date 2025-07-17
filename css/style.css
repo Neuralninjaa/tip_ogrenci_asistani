@@ -409,6 +409,34 @@ footer {
     }
 }
 
+.app-branding {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.branding-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    padding: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.branding-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: 600;
+}
+
+
 @media (max-width: 500px) {
     .category {
         padding: 1.5rem;
@@ -422,4 +450,18 @@ footer {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
+}
+
+#homeLink {
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#homeLink:hover {
+    color: var(--nav-hover);
 }

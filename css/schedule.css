@@ -512,6 +512,10 @@ footer {
         max-width: 200px;
     }
 
+    .calendar-container {
+        margin-top: 0;
+    }
+
     /* Responsive table adjustments */
     .calendar-table-container {
         overflow-x: auto; /* Allows horizontal scrolling for tables on small screens */
