@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akademik Takvim - Tıp Öğrencisi Asistanı</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/schedule.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -33,22 +33,225 @@
         <section class="calendar-container">
             <h1>Akademik Takvim</h1>
             <div class="calendar-filters">
-                <button class="filter-btn active" data-type="all">Tümü</button>
-                <button class="filter-btn" data-type="exam">Sınavlar</button>
-                <button class="filter-btn" data-type="holiday">Tatiller</button>
-                <button class="filter-btn" data-type="event">Etkinlikler</button>
+                <button class="filter-btn" data-period="period1">Dönem 1</button>
+                <button class="filter-btn" data-period="period2">Dönem 2</button>
+                <button class="filter-btn" data-period="period3">Dönem 3</button>
+
             </div>
-            <div class="calendar-events">
-                <!-- Takvim etkinlikleri JavaScript ile doldurulacak -->
+            <!-- Dönem 1 Tablosu -->
+            <div id="period1-table" class="calendar-table-container">
+                <h1>Güz Yarıyılı</h1>
+                <table class="calendar-table" tyle="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15-20 Eylül 2025</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>15 Eylül 2025</td>
+                            <td>Derslerin Başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>10-21 Kasım 2025</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>09 Ocak 2026</td>
+                            <td>Derslerin Sona Ermesi </td>
+                        </tr>
+                    </table>
+                    <h1>Bahar Yarıyılı</h1>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>26 Ocak-03 Şubat 2026</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>26 Ocak 2026</td>
+                            <td>Derslerin Başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>13-24 Nisan 2026</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>12 Haziran 2026</td>
+                            <td>Derslerin Sona Ermesi </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Pratik Sınavları </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Sınavı </td>
+                        </tr>
+                        <tr>
+                            <td>8-9-10 Temmuz 2026</td>
+                            <td>Bütünleme Sınavları </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            
+            <!-- Dönem 2 Tablosu -->
+            <div id="period2-table" class="calendar-table-container">
+                <h1>Güz Yarıyılı</h1>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01-07 Eylül 2025</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>01 Eylül 2025</td>
+                            <td>Ders Kurullarının ve Klinik Uygulama Kurullarının (KUK) başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>10-21 Kasım 2025</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>09 Ocak 2026</td>
+                            <td>Derslerin/KUK'ların Sona Ermesi </td>
+                        </tr>
+                </table>
+                    <h1>Bahar Yarıyılı</h1>
+                <table class="calendar-table" >
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>26 Ocak-03 Şubat 2026</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>26 Ocak 2026</td>
+                            <td>Derslerin/KUK'ların Başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>13-24 Nisan 2026</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>12 Haziran 2026</td>
+                            <td>Derslerin/KUK'ların Sona Ermesi </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Pratik Sınavları </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Sınavı </td>
+                        </tr>
+                        <tr>
+                            <td>8-9-10 Temmuz 2026</td>
+                            <td>Bütünleme Sınavları </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Dönem 3 Tablosu -->
+            <div id="period3-table" class="calendar-table-container">
+                <h1>Güz Yarıyılı</h1>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01-07 Eylül 2025</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>01 Eylül 2025</td>
+                            <td>Ders Kurullarının ve Klinik Uygulama Kurullarının (KUK) başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>10-21 Kasım 2025</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>09 Ocak 2026</td>
+                            <td>Derslerin/KUK'ların Sona Ermesi </td>
+                        </tr>
+                </table>
+                    <h1>Bahar Yarıyılı</h1>
+                <table class="calendar-table" >
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>26 Ocak-03 Şubat 2026</td>
+                            <td>Kayıt Yenileme </td>
+                        </tr>
+                        <tr>
+                            <td>26 Ocak 2026</td>
+                            <td>Derslerin/KUK'ların Başlaması </td>
+                        </tr>
+                        <tr>
+                            <td>13-24 Nisan 2026</td>
+                            <td>Ara Dönem Sınavları</td>
+                        </tr>
+                        <tr>
+                            <td>12 Haziran 2026</td>
+                            <td>Derslerin/KUK'ların Sona Ermesi </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Pratik Sınavları </td>
+                        </tr>
+                        <tr>
+                            <td>24-25-26 Haziran 2026</td>
+                            <td>Yıl Sonu Sınavı </td>
+                        </tr>
+                        <tr>
+                            <td>8-9-10 Temmuz 2026</td>
+                            <td>Bütünleme Sınavları </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tıp Öğrencisi Asistanı. Tüm hakları saklıdır.</p>
+        <p>&copy; 2025 Tıp Öğrencisi Asistanı. Tüm hakları saklıdır.</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/calendar.js"></script>
+
+    
 </body>
 </html> 
